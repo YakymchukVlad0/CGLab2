@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\downloadIcon.png" />
+    <None Remove="Images\gra.png" />
+    <None Remove="Images\IceAntiTriangle_651.png" />
+    <None Remove="Images\IceTriangle_650.png" />
+    <None Remove="Images\iconFractal.png" />
+    <None Remove="Images\reflectionIcon.png" />
+    <None Remove="Images\upload.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\downloadIcon.png" />
+    <Resource Include="Images\gra.png" />
+    <Resource Include="Images\IceAntiTriangle_651.png" />
+    <Resource Include="Images\IceTriangle_650.png" />
+    <Resource Include="Images\iconFractal.png" />
+    <Resource Include="Images\reflectionIcon.png" />
+    <Resource Include="Images\upload.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="FractalImages\" />
+    <Folder Include="3LabImages\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Drawing.Common" Version="7.0.0" />
+  </ItemGroup>
+
+</Project>

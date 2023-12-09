@@ -1,0 +1,214 @@
+﻿<Window x:Class="CGLab2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CGLab2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+    xmlns:theme="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero2">
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="Robotic>"></Setter>
+        </Style>
+
+        <Style TargetType="Button">
+            <Setter Property="BorderBrush" Value="Transparent" />
+            <Setter Property="BorderThickness" Value="1" />
+        </Style>
+
+        <Style x:Key="TransparentBorder" TargetType="Border">
+            <Setter Property="BorderBrush" Value="Transparent" />
+            <Setter Property="BorderThickness" Value="0"></Setter>
+            
+        </Style>
+
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+            <ColumnDefinition Width="8*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+
+        <StackPanel Grid.Column="0" Background="#0E131F">
+            
+            <TextBlock Height="60" Background="#232A3F" FontFamily="Robotic" FontSize="20" Text="Computer Graphics"
+                       Foreground="White" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center"
+                       Width="220"  LineHeight="1.2" Padding="10">
+                <Run Foreground="#0E131F" Text="●" FontSize="30"/>
+               
+            </TextBlock>
+            <Border BorderBrush="White" BorderThickness="0.5">
+                <TextBlock Height="30" Background="#232A3F" Text="MainWindow" FontFamily="Robotic"
+                       Foreground="White" FontSize="13" TextAlignment="Left" Padding="8" MouseLeftButtonDown="TextBlock5_MouseLeftButtonDown"></TextBlock>
+            </Border>
+
+            <Border BorderBrush="White" BorderThickness="0.5">
+                <TextBlock Height="30" Background="#232A3F" Text="Fractals" FontFamily="Robotic"
+                       Foreground="White" FontSize="15" TextAlignment="Left" Padding="8"></TextBlock>
+            </Border>
+
+            <Border BorderBrush="White" BorderThickness="0.5">
+                <TextBlock Height="30" Background="#232A3F" Text="Color Shemes" FontFamily="Robotic"
+                       Foreground="White" FontSize="13" TextAlignment="Left" Padding="8"
+                           MouseLeftButtonDown="TextBlock1_MouseLeftButtonDown"></TextBlock>
+            </Border>
+
+
+            <Border BorderBrush="White" BorderThickness="0.5">
+                <TextBlock Height="30" Background="#232A3F" Text="Moving Images" FontFamily="Robotic"
+                       Foreground="White" FontSize="13" TextAlignment="Left" Padding="8"
+                           MouseLeftButtonDown="TextBlock2_MouseLeftButtonDown"></TextBlock>
+            </Border>
+
+            <Border BorderBrush="White" BorderThickness="0.8">
+                <TextBlock Height="30" Background="#232A3F" Text="Educational Materials 1" FontFamily="Robotic"
+                       Foreground="White" FontSize="13" TextAlignment="Left" Padding="8" MouseLeftButtonDown="TextBlock3_MouseLeftButtonDown"></TextBlock>
+            </Border>
+
+            <Border BorderBrush="White" BorderThickness="0.8">
+                <TextBlock Height="30" Background="#232A3F" Text="Educational Materials 2" FontFamily="Robotic"
+                       Foreground="White" FontSize="13" TextAlignment="Left" Padding="8" MouseLeftButtonDown="TextBlock4_MouseLeftButtonDown"></TextBlock>
+            </Border>
+        </StackPanel>
+
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="61"></RowDefinition>
+                <RowDefinition Height="7*"></RowDefinition>
+                <RowDefinition Height="0.8*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <StackPanel Orientation="Horizontal" Grid.Row="0" Background="#494A66">
+                <Image Source="Images/iconFractal.png" Width="30" Height="30" />
+                
+                <TextBlock Text="Fractals" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                          FontSize="25" FontWeight="Bold" FontFamily="Robotic" Padding="5"/>
+
+
+
+
+            </StackPanel>
+
+
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="5*"></RowDefinition>
+                    <RowDefinition Height="0.7*"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Row="0" Background="#38405F" FontSize="15" FontFamily="Robotic">
+                    Tools for building fractals.<LineBreak/>
+                    Enter neccessary settings
+                </TextBlock>
+                <StackPanel Grid.Row="2" Background="#38405F" Orientation="Horizontal">
+
+                    <Button Name="btnApply" Width="60" Height="20" Background="#0E131F" Foreground="White" Content="Apply" HorizontalAlignment="Left"
+                            Margin="12,0,0,0" Click="btnApply_Click"></Button>
+
+                    <Button Name="btnBack" Width="60" Height="20" Background="Transparent" Foreground="#0E131F" BorderBrush="#0E131F" Content="Back" HorizontalAlignment="Left"
+                            Margin="12,0,0,0" Click="btnBack_Click"></Button>
+
+
+                    <Button Name="btnDownload" Width="80" Height="20" Background="Transparent" Foreground="Black" HorizontalAlignment="Right"
+                            Margin="320,0,0,0" FontWeight="SemiBold" Click="btnDownload_Click">
+       
+                        <TextBlock>
+                            <Image Width="13">  
+                                <Image.Source>  
+                                    <BitmapImage DecodePixelWidth="200"  UriSource="Images/downloadIcon.png" />  
+                                </Image.Source>  
+                            </Image>  
+                            <Underline>
+                                <Run Text="Download"/>
+                            </Underline>
+                        </TextBlock>
+                    </Button>
+
+                </StackPanel>
+
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="4*"></ColumnDefinition>
+                        <ColumnDefinition Width="8*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="0" Background="#38405F" >
+
+                        <TextBlock Foreground="White" Text="Choose fractal type" TextAlignment="Center" FontSize="12"
+                                   FontWeight="ExtraLight"></TextBlock>
+
+                        <ComboBox  Name="cbFractals" Width="130" ItemsSource="{Binding fractalTypes}" 
+                                  FontFamily="Robotic"  Foreground="Black" IsReadOnly="True" SelectedItem="{Binding SelectedType, Mode=TwoWay}" />
+
+                        <Slider Name="zoomSlider" Minimum="1" Maximum="100" Value="5.0" Width="180" Margin="0,20,0,0"
+                                SmallChange="1" LargeChange="5" ValueChanged="zoomSlider_ValueChanged"/>
+                        <TextBlock Text="Zoom Settings" TextAlignment="Center" Margin="0,0,0,25"></TextBlock>
+
+                        <TextBlock Foreground="White" Text="Fractal color" TextAlignment="Center" Margin="0,0,0,5"></TextBlock>
+                        <StackPanel Name="spButtons1" Orientation="Horizontal" HorizontalAlignment="Center" >
+                           
+                                <Button Name="btnBlack" Width="20" Height="20" Background="Black" Click="btnBlack_Click"></Button>
+                                <Button Name="btnBlue" Width="20" Height="20" Background="Blue" Click="btnBlue_Click"></Button>
+                                <Button Name="btnRed" Width="20" Height="20" Background="Red" Click="btnRed_Click"></Button>
+                                <Button Name="btnPurple" Width="20" Height="20" Background="Purple" Click="btnPurple_Click"></Button>
+                                <Button Name="btnGreen" Width="20" Height="20" Background="Green" Click="btnGreen_Click"></Button>
+                           
+                        </StackPanel>
+                        <StackPanel Name="spButtons2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,15">
+                            <Button Name="btnYellow" Width="20" Height="20" Background="Yellow" Click="btnYellow_Click"></Button>
+                            <Button Name="btnPink" Width="20" Height="20" Background="Pink" Click="btnPink_Click"></Button>
+                            <Button Name="btnBrown" Width="20" Height="20" Background="Brown" Click="btnBrown_Click"></Button>
+                            <Button Name="btnOrange" Width="20" Height="20" Background="Orange" Click="btnOrange_Click"></Button>
+                            
+                        </StackPanel>
+
+                        <StackPanel Background="Gray" Width="170" Height="Auto" Margin="10">
+                            <TextBlock FontSize="10">
+                                <Run Text="Current settings: Color:" />
+                                <Run Text="{Binding SelectedColor, Mode=TwoWay}" />  
+                            </TextBlock>
+                            <TextBlock FontSize="10">
+                                <Run Text="Type: " />
+                                <Run Text="{Binding SelectedType, Mode=TwoWay}" />
+                            </TextBlock>
+                            <TextBlock FontSize="10">
+                                <Run Text="Zoom: " />
+                                <Run Text="{Binding ElementName=zoomSlider, Path=Value}" />
+                            </TextBlock>
+                        </StackPanel>
+
+
+                    </StackPanel>
+
+
+                    <StackPanel Grid.Column="1" Background="#38405F">
+
+                        <Canvas Visibility="Visible" Name="myCanvas" Width="387" Height="250" Grid.Column="1" Background="White">
+                           
+
+                        </Canvas>
+                    </StackPanel>
+
+                    
+                      
+
+
+                   
+                </Grid>
+
+            </Grid>
+            
+            
+            
+            
+            
+            
+            <StackPanel Orientation="Horizontal" Grid.Row="2" Background="#494A66"/>
+
+
+        </Grid>
+        
+    </Grid>
+</Window>

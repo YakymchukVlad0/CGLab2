@@ -1,0 +1,162 @@
+﻿<Window x:Class="CGLab2.WindowMain"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CGLab2"
+        mc:Ignorable="d"
+        Title="WindowMain" Height="450" Width="740">
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="Robotic>"></Setter>
+        </Style>
+
+        <Style TargetType="Button">
+            <Setter Property="BorderBrush" Value="Transparent" />
+            <Setter Property="BorderThickness" Value="1" />
+        </Style>
+
+        <Style x:Key="TransparentBorder" TargetType="Border">
+            <Setter Property="BorderBrush" Value="Transparent" />
+            <Setter Property="BorderThickness" Value="0"></Setter>
+
+        </Style>
+
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+            <ColumnDefinition Width="8*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+
+        <StackPanel Grid.Column="0" Background="#0E131F">
+
+            <TextBlock Height="60" Background="#232A3F" FontFamily="Robotic" FontSize="20" Text="Computer Graphics"
+                Foreground="White" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center"
+                Width="220"  LineHeight="1.2" Padding="10">
+         <Run Foreground="#0E131F" Text="●" FontSize="30"/>
+
+            </TextBlock>
+            <Border BorderBrush="White" BorderThickness="0.5">
+                <TextBlock Height="30" Background="#232A3F" Text="MainWindow" FontFamily="Robotic"
+                Foreground="White" FontSize="15" TextAlignment="Left" Padding="8"></TextBlock>
+            </Border>
+
+            <Border BorderBrush="White" BorderThickness="0.5">
+                <TextBlock Height="30" Background="#232A3F" Text="Fractals" FontFamily="Robotic"
+                Foreground="White" FontSize="13" TextAlignment="Left" Padding="8" MouseLeftButtonDown="TextBlock3_MouseLeftButtonDown"></TextBlock>
+            </Border>
+
+            <Border BorderBrush="White" BorderThickness="0.5">
+                <TextBlock Height="30" Background="#232A3F" Text="Color Shemes" FontFamily="Robotic"
+                Foreground="White" FontSize="13" TextAlignment="Left" Padding="8"
+                    MouseLeftButtonDown="TextBlock1_MouseLeftButtonDown"></TextBlock>
+            </Border>
+
+
+            <Border BorderBrush="White" BorderThickness="0.5">
+                <TextBlock Height="30" Background="#232A3F" Text="Moving Images" FontFamily="Robotic"
+                Foreground="White" FontSize="13" TextAlignment="Left" Padding="8"
+                    MouseLeftButtonDown="TextBlock2_MouseLeftButtonDown"></TextBlock>
+            </Border>
+
+            <Border BorderBrush="White" BorderThickness="0.8">
+                <TextBlock Height="30" Background="#232A3F" Text="Educational Materials 1" FontFamily="Robotic"
+                Foreground="White" FontSize="13" TextAlignment="Left" Padding="8" MouseLeftButtonDown="TextBlock5_MouseLeftButtonDown"></TextBlock>
+            </Border>
+
+            <Border BorderBrush="White" BorderThickness="0.8">
+                <TextBlock Height="30" Background="#232A3F" Text="Educational Materials 2" FontFamily="Robotic"
+                Foreground="White" FontSize="13" TextAlignment="Left" Padding="8" MouseLeftButtonDown="TextBlock4_MouseLeftButtonDown"></TextBlock>
+            </Border>
+        </StackPanel>
+
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="61"></RowDefinition>
+                <RowDefinition Height="7*"></RowDefinition>
+                <RowDefinition Height="0.8*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <StackPanel Orientation="Horizontal" Grid.Row="0" Background="#494A66">
+                <Image Source="Images/iconFractal.png" Width="30" Height="30" />
+
+                <TextBlock Text="Main Window" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                   FontSize="25" FontWeight="Bold" FontFamily="Robotic" Padding="5"/>
+
+
+
+
+            </StackPanel>
+
+
+            <Grid Grid.Row="1" Background="#38405F">
+
+                <StackPanel Orientation="Horizontal">
+                    <Image Width="260" Height="200" HorizontalAlignment="Left">
+                        <Image.Source>
+                            <BitmapImage DecodePixelWidth="200"  UriSource="Images/gra.png" />
+                        </Image.Source>
+                    </Image>
+
+
+                    <StackPanel Orientation="Vertical" Width="489">
+
+                        <TextBlock Text="About application" Foreground="White" FontFamily="Robotic" FontSize="20" Margin="20,60,0,5"></TextBlock>
+
+                        <TextBlock Background="#38405F" FontSize="14" FontFamily="Robotic" Foreground="White" Padding="30,0,0,0">
+          1. Design with precision
+                        </TextBlock>
+                        <TextBlock Background="#38405F" FontSize="13" FontFamily="Robotic" Foreground="White" Padding="20,0,0,0">
+
+Craft fractals with precision using our<LineBreak/>
+                            advanced tools. Customize every detail<LineBreak/> and bring your artistic vision to life.
+
+                        </TextBlock>
+
+
+                        <TextBlock Background="#38405F" FontSize="14" FontFamily="Robotic" Foreground="White" Padding="30,0,0,0">
+          2. Discover color harmony
+                        </TextBlock>
+                        <TextBlock Background="#38405F" FontSize="13" FontFamily="Robotic" Foreground="White" Padding="20,0,0,0">
+
+Experiment with vibrant color schemes<LineBreak/>
+                            to enhance your fractal compositions.<LineBreak/>
+                            Our color palette tools make it easy<LineBreak/> to find the perfect hues.
+
+                        </TextBlock>
+
+
+                        <TextBlock Background="#38405F" FontSize="14" FontFamily="Robotic" Foreground="White" Padding="30,0,0,0">
+          3. Study Materials with Depth
+                        </TextBlock>
+                        <TextBlock Background="#38405F" FontSize="13" FontFamily="Robotic" Foreground="White" Padding="20,0,0,0">
+
+Delve into the world of materials with<LineBreak/>
+                            our interactive study resources. Explore<LineBreak/>
+                            the properties of wood, metal, and more<LineBreak/> to perfect your art.
+
+                        </TextBlock>
+
+
+
+                    </StackPanel>
+                </StackPanel>
+               
+
+                    
+            </Grid>
+
+
+
+
+
+
+            <StackPanel Orientation="Horizontal" Grid.Row="2" Background="#494A66"/>
+
+
+        </Grid>
+
+    </Grid>
+</Window>
